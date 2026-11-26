@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Savings calculator — Hoymiles PH</title>
+<meta name="description" content="Estimate what Hoymiles solar and storage could take off your electricity bill.">
+<link rel="canonical" href="https://hoymiles.ph/savings-calculator">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Savings calculator — Hoymiles PH">
+<meta property="og:description" content="Estimate what Hoymiles solar and storage could take off your electricity bill.">
+<meta property="og:url" content="https://hoymiles.ph/savings-calculator">
+<meta property="og:locale" content="en_PH">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="wordmark" href="index.html"><img class="wordmark__dark" src="images/logo.png" alt="Hoymiles PH" width="120" height="34"><img class="wordmark__light" src="images/logo-light.png" alt="" aria-hidden="true" width="120" height="34"><span class="wordmark__ph">PH</span></a>
+    <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+      <svg class="icon-bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="navwrap" id="nav">
+      <div class="topbar"><a href="news.html">Updates</a><a href="where-to-buy.html">Where to buy</a><a href="faq.html">FAQ</a><a class="shop" href="quote.html">Get a quote</a></div>
+      <nav class="nav" aria-label="Main">
+        <div class="menu" id="productMenu">
+          <a class="nav__trigger" id="productTrigger" href="products.html" aria-expanded="false" aria-controls="productMega" aria-haspopup="true">Products <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega" id="productMega"><div class="mega__in">
+            <div class="mega__tabs" role="tablist" aria-label="Product categories"><button class="mega__tab" role="tab" aria-selected="true" aria-controls="panel-hibattery" id="tab-hibattery" type="button">HiBattery plug-in storage</button><button class="mega__tab" role="tab" aria-selected="false" aria-controls="panel-hione" id="tab-hione" type="button">HiOne all-in-one systems</button></div>
+            <div><div class="mega__bar"><a class="mega__seeall" href="products.html">All 4 products <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+            <div class="mega__panel" role="tabpanel" id="panel-hibattery" aria-labelledby="tab-hibattery" data-active="true"><a class="mega__item" href="hibattery-inverter.html"><span class="mega__thumb"><img src="images/hibattery-inverter.png" alt="" loading="lazy"></span><span class="mega__name">HiBattery Inverter</span><span class="mega__price">₱125,000</span></a><a class="mega__item" href="hibattery-battery.html"><span class="mega__thumb"><img src="images/hibattery-battery.png" alt="" loading="lazy"></span><span class="mega__name">HiBattery</span><span class="mega__price">₱120,000</span></a><a class="mega__item mega__item--all" href="hibattery.html"><span class="mega__thumb mega__thumb--all"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="mega__name">All hibattery plug-in storage</span></a></div><div class="mega__panel" role="tabpanel" id="panel-hione" aria-labelledby="tab-hione" data-active="false"><a class="mega__item" href="hione-inverter.html"><span class="mega__thumb"><img src="images/hione-inverter.png" alt="" loading="lazy"></span><span class="mega__name">HiOne Inverter</span><span class="mega__price">from ₱110,000</span></a><a class="mega__item" href="hione-battery.html"><span class="mega__thumb"><img src="images/hione-battery.png" alt="" loading="lazy"></span><span class="mega__name">HiOne Battery</span><span class="mega__price">₱120,000</span></a><a class="mega__item mega__item--all" href="hione.html"><span class="mega__thumb mega__thumb--all"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="mega__name">All hione all-in-one systems</span></a></div></div>
+          </div></div>
+        </div>
+        <a class="nav__link" href="savings-calculator.html" aria-current=page>Savings calculator</a><a class="nav__link" href="dealers.html">Become a dealer</a><a class="nav__link" href="about.html">About us</a><a class="nav__link" href="contact.html">Contact</a>
+        <a class="nav__cta" href="quote.html">Get a quote</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="top">
+<section class="banner">
+  <div class="banner__in">
+    <h1>What could solar take off your bill?</h1><p class="lead">Enter your average monthly bill. Everything is worked out in your browser — nothing is uploaded, nothing is sent to us, and every assumption is shown and editable.</p>
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li>Savings calculator</li></ol></nav>
+  </div>
+</section>
+<section class="sec sec--soft">
+<div class="shell calc">
+<form class="calc__form" id="calcForm" novalidate>
+<div class="field">
+<label for="c-bill">Average monthly bill</label>
+<span class="hint">Use the 12-month average printed on your bill, not a single month.</span>
+<div class="inputwrap"><span class="inputwrap__pre">₱</span><input id="c-bill" type="number" inputmode="numeric" min="0" step="100" value="14000"></div>
+</div>
+<div class="field">
+<label for="c-utility">Your electricity provider</label>
+<span class="hint">Rates differ across the country and change every month.</span>
+<select id="c-utility">
+<option value="15.551">Meralco — ₱15.55 per kWh (November 2026)</option>
+<option value="custom">Other provider — I will enter my rate</option>
+</select>
+</div>
+<div class="field" id="c-raterow" hidden>
+<label for="c-rate">Your rate per kWh</label>
+<span class="hint">Divide the total on your bill by the kWh used.</span>
+<div class="inputwrap"><span class="inputwrap__pre">₱</span><input id="c-rate" type="number" inputmode="decimal" min="1" step="0.01" value="15.55"></div>
+</div>
+<div class="field">
+<label for="c-setup">What you have now</label>
+<select id="c-setup">
+<option value="none">No solar, no battery</option>
+<option value="solar">Solar panels, no battery</option>
+<option value="both">Solar panels and a battery</option>
+<option value="battery">A battery, no solar</option>
+</select>
+</div>
+<div class="field" id="c-kwprow" hidden>
+<label for="c-kwp">Size of your array</label>
+<span class="hint">In kilowatts-peak. Not sure? Count the panels and multiply by 0.6.</span>
+<div class="inputwrap"><input id="c-kwp" type="number" inputmode="decimal" min="0" step="0.5" value="5"><span class="inputwrap__post">kWp</span></div>
+</div>
+<div class="field" id="c-batrow" hidden>
+<label for="c-bat">Battery you already have</label>
+<span class="hint">Total usable capacity in kWh.</span>
+<div class="inputwrap"><input id="c-bat" type="number" inputmode="decimal" min="0" step="0.5" value="5"><span class="inputwrap__post">kWh</span></div>
+</div>
+<details class="calc__assume">
+<summary>Assumptions used</summary>
+<div class="field">
+<label for="c-sun">Usable sun hours per day</label>
+<span class="hint">Energy yield per kWp after losses. 4.0 is a reasonable Philippine average.</span>
+<div class="inputwrap"><input id="c-sun" type="number" inputmode="decimal" min="1" max="7" step="0.1" value="4.0"><span class="inputwrap__post">kWh/kWp/day</span></div>
+</div>
+<p class="calc__source">The Meralco figure of ₱15.5510/kWh is the November 2026 residential rate. It changes monthly — for anything you are deciding on, use the rate on your latest bill.</p>
+</details>
+</form>
+<div class="calc__out" id="calcOut" aria-live="polite">
+<div class="calc__topline">
+<div><span class="calc__label">You use about</span><strong class="calc__big" id="o-kwh">—</strong><span class="calc__unit">kWh a month</span></div>
+<div><span class="calc__label">Estimated saving</span><strong class="calc__big" id="o-save">—</strong><span class="calc__unit">per month</span></div>
+<div><span class="calc__label">Pays for itself in</span><strong class="calc__big" id="o-payback">—</strong><span class="calc__unit" id="o-payunit">years</span></div>
+</div>
+<div class="calc__rec" id="o-rec"></div>
+<div class="calc__working">
+<h2 class="h3">How this was worked out</h2>
+<ol class="working" id="o-working"></ol>
+<p class="calc__caveat" id="o-caveat"></p>
+</div>
+</div>
+</div>
+</section>
+<section class="nextstep" data-mark="Hoymiles">
+  <div class="nextstep__in">
+    <div><h2>An estimate is not a quote</h2><p>A real quote needs your roof, your usage pattern and your switchboard. Send your details and we will do it properly.</p></div>
+    <div class="nextstep__go">
+      <a class="btn btn--green" href="quote.html">Request a quote <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a>
+      
+      <a class="nextstep__arrow" href="quote.html" aria-label="Request a quote"><svg viewBox="0 0 64 64"><path d="M14 50 50 14M22 14h28v28"/></svg></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer__in">
+    <div class="footer__top">
+      <div>
+        <a class="wordmark" href="index.html"><img src="images/logo.png" alt="Hoymiles PH" width="134" height="38"><span class="wordmark__ph">PH</span></a>
+        <p class="footer__tag">Be solar-ready. Open energy for all.</p>
+        <p class="footer__seller">Hoymiles PH is an authorized seller of Hoymiles products in the Philippines.</p>
+      </div>
+      <div class="footer__cols">
+        <div><h2>Products</h2><ul class="footer__links"><li><a href="hibattery.html">HiBattery plug-in storage</a></li><li><a href="hione.html">HiOne all-in-one systems</a></li></ul></div>
+        <div><h2>Tools &amp; support</h2><ul class="footer__links">
+          <li><a href="savings-calculator.html">Savings calculator</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="quote.html">Request a quote</a></li>
+          <li><a href="where-to-buy.html">Where to buy</a></li></ul></div>
+        <div><h2>Company</h2><ul class="footer__links">
+          <li><a href="about.html">About us</a></li>
+          <li><a href="news.html">Updates</a></li>
+          <li><a href="dealers.html">Become a dealer</a></li>
+          <li><a href="contact.html">Contact us</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span id="year">2026</span> Hoymiles PH. Prices in Philippine pesos and subject to change. Hoymiles is a trademark of Hoymiles Power Electronics Inc.</span>
+      <div class="social"></div>
+    </div>
+  </div>
+</footer>
+
+<script>window.HM_SYSTEMS=[{"slug": "hione-inverter", "name": "HiOne 8 kW + 1 HiOne Battery (8 kWh)", "price": 230000, "kwp": 8, "kwh": 8}, {"slug": "hione-inverter", "name": "HiOne 10 kW + 2 HiOne Batteries (16 kWh)", "price": 370000, "kwp": 10, "kwh": 16}, {"slug": "hione-inverter", "name": "HiOne 12 kW + 3 HiOne Batteries (24 kWh)", "price": 510000, "kwp": 12, "kwh": 24}];window.HM_ACBATT={"slug": "hibattery-battery", "name": "HiBattery", "price": 120000, "kwh": 4.02};</script>
+<script src="site.js" defer></script>
+</body>
+</html>
